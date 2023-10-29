@@ -24,17 +24,17 @@ Part 2 🟦
 
 Technology uses : 💻
 
-  - Pour ce projet nous sommes sur le langage de programmation Golang.
+  - For this project we are using the Golang programming language.
 
 
-Son système d'installation : 🏗️
+Installation system  : 🏗️
 
-    - Prendre le lien de la création de notre répository sur Gitea puis de le clone dans notre fichier VS-code.  
+    - Take the link to our Gitea repository and clone it in our VS-code file.  .  
 
-    - Créer 3 fonctions = Verticale , Horizontale, Diagonale.
+    - Create 3 functions = Vertical, Horizontal, Diagonal.
 
-Comment le lancer : 🏁
+How to launch : 🏁
 
-    - Grâce à GIT et ses commandes il nous suffis juste de taper la commande : "go run ("nom du notre package")".
+    - Thanks to GIT and its commands, all we need to do is type the command: "go run ("name of our package")".
 
-    - Et grâce à ces commandes nous pouvons donc ajouter notre travail avec la commande : "git add . ", puis l'initialiser avec la commande : "git commit -m "notre_texte" et enfin l'envoyer avec la commande : "git push".
+    - And thanks to these commands, we can add our work with the command: "git add . "then initialize it with the command: "git commit -m "notre_texte" and finally send it with the command: "git push". 
