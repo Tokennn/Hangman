@@ -12,7 +12,7 @@ import (
 func Randomly(filename string) (string, error) {
 	file, err := os.Open(filename)
 	if err != nil {
-		return "", fmt.Errorf("impossible d'ouvrir le fichier %s : %v", filename, err)
+		return "", fmt.Errorf("we can't open the folder %s : %v", filename, err)
 	}
 	defer file.Close()
 
@@ -26,15 +26,14 @@ func Randomly(filename string) (string, error) {
 	}
 
 	if err := scanner.Err(); err != nil { //
-		return "", fmt.Errorf("erreur lors de la lecture du fichier %s : %v", filename, err)
+		return "", fmt.Errorf("error while reading file %s : %v", filename, err)
 	}
 
 	if len(words) == 0 {
-		return "", fmt.Errorf("le fichier %s est vide", filename)
+		return "", fmt.Errorf("the folder %s is empty", filename)
 	}
 
 	rand.Seed(time.Now().UnixNano())
 	randomIndex := rand.Intn(len(words))
-	fmt.Println("test : " + words[randomIndex])
 	return words[randomIndex], nil
 }

@@ -41,6 +41,5 @@ func main() {
 		}
 	}
 	fmt.Println()
-	hangman.ReadLetter(&data)
-
+	hangman.Reveal(data.Word, data.Word, "a")
 }
