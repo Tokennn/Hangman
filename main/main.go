@@ -58,7 +58,7 @@ func main() {
 	}
 
 	fmt.Println()
-	hangman.RechercheMot(pointerData)
+	hangman.Search(pointerData)
 	hangman.Validallletter(revealed)
 	hangman.Partial(data.Word, revealed)
 	hangman.Putwordinside("a", 0, "a")

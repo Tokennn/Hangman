@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func RechercheMot(data *HangManData) {
+func Search(data *HangManData) {
 	goal := data.Tofind
 	// tentativesRestantes := 10
 	gamecondit := true
