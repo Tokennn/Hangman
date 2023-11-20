@@ -25,7 +25,7 @@ func main() {
 		data.Word += "_"
 	}
 
-	// Révéler n lettres aléatoires dans le mot
+	// Reveal n random letters in the word
 	n := len(data.Tofind)/2 - 1
 	revealed := make([]bool, len(data.Tofind))
 	for i := 0; i < n; i++ {
@@ -49,7 +49,7 @@ func main() {
 	data.Word = newWord
 	fmt.Println(data.Tofind)
 
-	// Afficher le mot avec les lettres révélées
+	//  Display the word with the revealed letters
 	for i, c := range data.Tofind {
 		if revealed[i] {
 			fmt.Printf("%c ", c)
@@ -57,6 +57,8 @@ func main() {
 			fmt.Print("_ ")
 		}
 	}
+
+	//Initializes other functions
 
 	fmt.Println()
 	hangman.Reveal(pointerData)

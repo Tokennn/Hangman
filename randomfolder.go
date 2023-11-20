@@ -9,6 +9,8 @@ import (
 	"time"
 )
 
+//Generates one of three files at random
+
 func Randomly(filename string) (string, error) {
 	file, err := os.Open(filename)
 	if err != nil {

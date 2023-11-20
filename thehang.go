@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+//View the sketch of the hanged man
+
 func Showhang(w *HangManData) {
 	pendue, err := os.Open("hangman.txt")
 	var tab []string
