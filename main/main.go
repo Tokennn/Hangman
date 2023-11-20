@@ -37,6 +37,7 @@ func main() {
 			revealed[randomIndex] = true
 		}
 	}
+
 	newWord := ""
 	for a, i := range revealed {
 		if i {
@@ -58,7 +59,7 @@ func main() {
 	}
 
 	fmt.Println()
-	hangman.Search(pointerData)
+	hangman.Reveal(pointerData)
 	hangman.Validallletter(revealed)
 	hangman.Partial(data.Word, revealed)
 	hangman.Putwordinside("a", 0, "a")

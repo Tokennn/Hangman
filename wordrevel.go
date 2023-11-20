@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func Search(data *HangManData) {
+func Reveal(data *HangManData) {
 	goal := data.Tofind
 	// tentativesRestantes := 10
 	gamecondit := true
@@ -24,9 +24,14 @@ func Search(data *HangManData) {
 		fmt.Print("Choose : ")
 		fmt.Scan(&input)
 
-		if len(input) != 1 {
-			// fmt.Println("Please enter just one letter.")
-			continue
+		if len(input) > 1 {
+			if input == data.Tofind {
+				fmt.Println("Congrats :", data.Tofind)
+				return
+			} else {
+				data.Attempts += -2
+				fmt.Println("Wrong word. Try again.")
+			}
 		}
 
 		input = strings.ToLower(input)
@@ -63,7 +68,7 @@ func Search(data *HangManData) {
 		fmt.Println("Word: ", data.Word)
 
 		if data.Tofind == data.Word {
-			fmt.Println("Congrats", data.Word)
+			fmt.Println("Congrats :", data.Word)
 			return
 		}
 		Showhang(data)

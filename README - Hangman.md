@@ -29,9 +29,7 @@ Technology uses : 💻
 
 Installation system  : 🏗️
 
-    - Take the link to our Gitea repository and clone it in our VS-code file.  .  
-
-    - Create 3 functions = Vertical, Horizontal, Diagonal.
+    - Take the link to our Gitea repository and clone it in our VS-code file.
 
 How to launch : 🏁
 
