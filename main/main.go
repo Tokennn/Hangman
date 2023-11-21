@@ -47,7 +47,7 @@ func main() {
 		}
 	}
 	data.Word = newWord
-	fmt.Println(data.Tofind)
+	// fmt.Println(data.Tofind)
 
 	//  Display the word with the revealed letters
 	for i, c := range data.Tofind {
