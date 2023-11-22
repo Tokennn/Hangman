@@ -29,7 +29,7 @@ func Reveal(data *HangManData) {
 				fmt.Println("Congrats :", data.Tofind)
 				return
 			} else {
-				data.Attempts += -2
+				data.Attempts += -1
 				fmt.Println("Wrong word. Try again.")
 			}
 		}
