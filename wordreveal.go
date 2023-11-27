@@ -68,7 +68,7 @@ func Reveal(data *HangManData) {
 		fmt.Println("Word: ", data.Word)
 
 		if data.Tofind == data.Word {
-			fmt.Println("Congrats :", data.Word)
+			fmt.Println("Congrats isabelle :", data.Word)
 			return
 		}
 		Showhang(data)
