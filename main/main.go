@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	hangman "hang"
 	"math/rand"
 	"os"
 	"time"
+
+	"github.com/Tokennn/hangman"
 )
 
 func main() {
