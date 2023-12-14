@@ -59,6 +59,7 @@ func Reveal(data *HangManData) {
 			data.Attempts--
 			// Showhang(pendu, 10-tentativesRestantes)
 		}
+		Showhang(data)
 
 		if data.Attempts == 0 {
 			fmt.Println("You lose", data.Tofind)
@@ -71,6 +72,5 @@ func Reveal(data *HangManData) {
 			fmt.Println("Congrats isabelle :", data.Word)
 			return
 		}
-		Showhang(data)
 	}
 }

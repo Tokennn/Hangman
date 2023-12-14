@@ -65,4 +65,5 @@ func main() {
 	hangman.Validallletter(revealed)
 	hangman.Partial(data.Word, revealed)
 	hangman.Putwordinside("a", 0, "a")
+	hangman.DisplayWord(revealed, data.Tofind)
 }
