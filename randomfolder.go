@@ -2,40 +2,35 @@ package hangman
 
 import (
 	"bufio"
-	"fmt"
+	"log"
 	"math/rand"
 	"os"
-	"strings"
 	"time"
 )
 
 //Generates one of three files at random
 
-func Randomly(filename string) (string, error) {
-	file, err := os.Open(filename)
+func Randomly() string {
+
+	dictionaryPath := os.Args[1]
+	var tabword []string
+	readFile, err := os.Open(dictionaryPath)
 	if err != nil {
-		return "", fmt.Errorf("we can't open the folder %s : %v", filename, err)
+		log.Fatal(err)
 	}
-	defer file.Close()
-
-	scanner := bufio.NewScanner(file)
-	words := make([]string, 0)
-
-	for scanner.Scan() {
-		line := scanner.Text()
-		wordList := strings.Fields(line)
-		words = append(words, wordList...)
+	fileScanner := bufio.NewScanner(readFile) // Crée un scanner pour lire le fichier.
+	fileScanner.Split(bufio.ScanLines)        // Divise le fichier en lignes.
+	// Parcours chaque ligne du fichier.
+	for fileScanner.Scan() {
+		// Ajoute le texte de la ligne actuelle à la slice trouverlemot.
+		tabword = append(tabword, fileScanner.Text())
 	}
+	readFile.Close()
+	rand.Seed(time.Now().UnixNano()) // Initialize the random number generator
+	max := len(tabword)
+	indexrandomword := rand.Intn(max)
+	randomword := tabword[indexrandomword]
 
-	if err := scanner.Err(); err != nil { //
-		return "", fmt.Errorf("error while reading file %s : %v", filename, err)
-	}
+	return randomword
 
-	if len(words) == 0 {
-		return "", fmt.Errorf("the folder %s is empty", filename)
-	}
-
-	rand.Seed(time.Now().UnixNano())
-	randomIndex := rand.Intn(len(words))
-	return words[randomIndex], nil
 }
