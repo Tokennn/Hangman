@@ -5,16 +5,7 @@ import (
 	"strings"
 )
 
-//	func DisplayWord(revealed []bool, word string) {
-//		for i, c := range word {
-//			if revealed[i] {
-//				fmt.Printf("%c ", c)
-//			} else {
-//				fmt.Print("_ ")
-//			}
-//		}
-//	}
-func Displayword(words string) string {
+func Displaywords(words string) string {
 	numbreveal := (len(words) / 2) - 1
 	tabword := make([]string, len(words))
 	for i := range tabword {
