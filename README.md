@@ -25,7 +25,7 @@ These instructions will enable you to obtain a copy of the project (Hangman), on
 
 2. **Go to the project directory :**
     ```bash
-    cd "hangman-web"
+    cd "hangman"
     ```
 
 3. **Start the game :**
